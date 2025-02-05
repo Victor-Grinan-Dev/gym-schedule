@@ -1,0 +1,75 @@
+@mixin link-styles {
+    color: $bandida-golden-7;
+    padding: 5px 15px;
+    text-decoration: none;
+    font-family:"League Gothic", sans-serif;
+    // font-family:"Inknut Antiqua", sans-serif;
+    transition: all .5s ease-in-out;
+    border: 2px solid transparent;
+    margin-top: 10px;
+    font-size: large;
+    cursor: pointer;
+
+    &:hover {
+        border: 2px solid $bandida-golden-7;
+        color: #f6f6f3;
+    }
+
+    &.active{
+      a{
+        border: 2px solid $bandida-golden-7;
+        color: #f6f6f3;
+      }
+    }
+
+    @media (max-width: 400px) {
+        justify-content: center;
+        font-size: small;
+    }
+    @media (max-width: 303px) {
+        justify-content: center;
+        font-size: small;
+    }
+} 
+
+
+@mixin no-highlight{
+  -webkit-user-select: none; /* For Chrome, Safari, and Edge */
+  -moz-user-select: none;    /* For Firefox */
+  -ms-user-select: none;     /* For Internet Explorer/Edge */
+  user-select: none;         /* Standard */
+}
+
+@mixin arc-text{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform: translateY(120px);
+    top: -4.5vh;
+
+    &   span {
+        position: absolute;
+        transform-origin: bottom center;
+        font-size: 25px;
+      }
+
+    & span:nth-child(1) { transform: rotate(-30deg) translateY(-70px); }
+    & span:nth-child(2) { transform: rotate(-18deg) translateY(-70px); }
+    & span:nth-child(3) { transform: rotate(-6deg) translateY(-70px); }
+    & span:nth-child(4) { transform: rotate(6deg) translateY(-70px); }
+    & span:nth-child(5) { transform: rotate(18deg) translateY(-70px); }
+    & span:nth-child(6) { transform: rotate(30deg) translateY(-70px); }
+  }
+
+
+@mixin no-scrollbar-y {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;     
+  overflow: auto; 
+    
+  &::-webkit-scrollbar {
+      display: none; 
+  }
+}

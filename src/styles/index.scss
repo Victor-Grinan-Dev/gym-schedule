@@ -1,0 +1,19 @@
+@import "./base.scss";
+@import "./constants.scss";
+@import "./mixins.scss";
+@import "./animations.scss";
+
+/*pages*/
+@import "../pages/landingPage/landingPage.scss";
+@import "../pages/notFound/notFound.scss";
+
+
+/*components*/
+@import "../components/navegator/navegator.scss";
+@import "../components/InfiniteCarrusel/infiniteCarrusel.scss";
+@import "../components/hamburger/hamburger.scss";
+@import "../components/menuModal/menuModal.scss";
+@import "../components/picModal/picModal.scss";
+
+
+

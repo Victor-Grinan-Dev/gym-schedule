@@ -1,0 +1,21 @@
+.not-found{
+
+    display: flex;
+    flex-direction: column;
+
+    .link-wrapper{
+        top:40px;
+        left:40px;
+        z-index: 10;
+    }
+
+    .content{
+        font-size: xx-large;
+        color:$bandida-golden-6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 90dvh;
+        padding: 20px;
+    }
+}

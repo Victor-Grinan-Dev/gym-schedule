@@ -1,0 +1,109 @@
+.boobkings{
+    max-height: 100dvh;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    background-color: $bandidas-black-1;
+
+    @include no-scrollbar-y;
+
+    &__tabs-bar{
+        width: 100%;
+
+    }
+    
+    .booking-text{
+        padding-bottom: 40px;
+
+        @media (max-width:700px) {
+            padding-bottom: 10px;
+        }
+    }
+
+    .content-wrapper{
+        width: 100%;
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        gap: 50px;
+
+        &__column-a, &__column-b{
+            width: 45%;
+            position: relative;
+            top: 0;
+            bottom: 0;
+            flex: 1;
+            display: flex;
+        }
+        &__column-a{
+            justify-content: end;
+
+            .pic-item{
+                max-width: 70%;
+                object-fit:cover;
+            }
+
+        }
+        &__column-b{
+            flex-direction: column;
+            gap: 50px;
+
+            .content-item{
+                display: flex;
+                width: fit-content;
+                justify-content: space-between;
+                min-width: 60%;
+                gap: 10px;
+
+                p{
+                    width: 100%;
+                    max-width: 350px;
+                }
+
+                &__head{
+                    display: flex;
+                    gap: 10px;
+                }
+
+                .copy-icon-wrapper{
+                    cursor: pointer;
+                }
+
+            }
+        }
+
+        @media (max-width:700px) {
+            flex-direction: column-reverse;
+
+            &__column-a{
+                width: 100%;
+                overflow: hidden;
+                justify-content: center;
+
+            }
+            &__column-b{
+                width: 100%;
+                gap: 15px;
+
+                .content-item{
+                    width: 100%;
+                    gap:10px;
+
+                    p{
+                        max-width: none;
+                    }
+
+                }
+            }
+
+        }
+    }
+}
+
+.active{
+    color: green;
+}

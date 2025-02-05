@@ -1,0 +1,55 @@
+.landinpage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $bandidas-black-1;
+    color: white;
+
+    // background-image: url('');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 150%;
+    animation: moveBackground 60s linear infinite;
+
+    &-banner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }      
+    
+    @media (max-width:1000px) {
+        background-size: 200%;
+    }
+    @media (max-width:500px) {
+        background-size: 300%;
+    }
+    @media (max-width:375px) {
+        background-size: 400%;
+    }
+}
+
+
+/*LOGO*/
+.logo-wrapper{
+    height: 100%;
+    width: 100%;
+    // aspect-ratio: 3/2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.733);
+
+    @include no-highlight;
+
+    @media (max-width:665px) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+}
