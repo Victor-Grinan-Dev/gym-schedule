@@ -6,12 +6,12 @@
 export const APPLINKS = [
 
     {
-        caption:"Info",
+        caption:"Today's Plan",
         linksTo:"/info",
         type:"b",
     },
     {
-        caption:"Studio",
+        caption:"Full Week Plan",
         linksTo:"#studio",
         type:"a",
     },
@@ -21,14 +21,9 @@ export const APPLINKS = [
         type:"b",
     },
     {
-        caption:"Artist",
+        caption:"About",
         linksTo:"#about-me",
         type:"a",
-    },
-    {
-        caption:"Ajanvaraus",
-        linksTo:"booking",
-        type:"b",
     },
 ];
 

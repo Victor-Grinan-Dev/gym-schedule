@@ -8,7 +8,8 @@ import { useSelector } from "react-redux";
 /* COMPONENTS */
 import MenuModal from "../../components/menuModal/MenuModal";
 import Today from "../../components/today/Today";
-// import PicLoader from '../../components/picLoader/PicLoader';
+import Navegator from "../../components/navegator/Navegator";
+
 
 const endpoint = process.env.REACT_APP_API_ENDPOINT
 const LandingPage = () => {
@@ -33,14 +34,7 @@ const LandingPage = () => {
 
   return (
     <div className='landinpage' id="landingpage">
-        {/* <section className="landinpage-banner" style={{width:"100%"}}>
-          today we do:
-          {
-            stateData && stateData.map((d, i)=>(
-              <p key={i}>{d[today]}</p>
-            ))
-          }
-        </section> */}
+        <Navegator />
         <Today weekday={today} stateData={stateData}/>
 
         { isModal && <MenuModal />}
