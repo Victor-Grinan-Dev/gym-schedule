@@ -8,7 +8,8 @@ import Today from "../../components/today/Today";
 const LandingPage = () => {
   const [stateData, setData] = useState();
 
-  const endpoint = import.meta.env.VITE_APP_ENDPOINT
+  // const endpoint = import.meta.env.VITE_APP_ENDPOINT
+  const endpoint = "https://script.google.com/macros/s/AKfycbxNWgf2NnoqlrSE7FlC9neUd8Jxj02tgcF2v_hDE1ZuJEbhITWgk9XWR4oHIxaraNyW/exec"
   console.log(endpoint);
 
   const getData = async () => {
