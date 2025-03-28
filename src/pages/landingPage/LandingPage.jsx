@@ -5,9 +5,11 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 /* COMPONENTS */
 import Today from "../../components/today/Today";
 
-const endpoint = process.env.REACT_APP_API_ENDPOINT
 const LandingPage = () => {
   const [stateData, setData] = useState();
+
+  const endpoint = import.meta.env.VITE_APP_ENDPOINT
+  console.log(endpoint);
 
   const getData = async () => {
     try {
@@ -22,6 +24,7 @@ const LandingPage = () => {
 
   useEffect(() => {
       getData();
+      // eslint-disable-next-line
   }, [])
 
   const today = new Date().getDay();
