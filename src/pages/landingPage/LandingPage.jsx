@@ -13,11 +13,10 @@ const LandingPage = () => {
     try {
         const res = await fetch(endpoint);
         const data = await res.json();
-        console.log(data);
         setData(data);
         
     }catch (error) {
-      console.log(error);
+      console.log(`${JSON.stringify(error)}`);
     }
   }
 
